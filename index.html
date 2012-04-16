@@ -1,1 +1,285 @@
-Slumlord Next Door
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='js/modestmaps.min.js' type='text/javascript'></script>
+    <script src='js/wax.mm.js' type='text/javascript'></script>
+    <script src='js/site.js' type='text/javascript'></script>    
+    <script type="text/javascript" src="http://use.typekit.com/jmw1fzj.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link href='controls.css' rel='stylesheet' type='text/css' />
+    <link href='style.css' rel='stylesheet' type='text/css' />  
+    <link href='table_controls.css' rel='stylesheet' type='text/css' />
+    <link href='charts.css' rel='stylesheet' type='text/css' />  
+</head>
+<body>
+  <!--<div id='sidebar'>
+    <h2>Tornadoes in the U.S. - 2010</h2>
+    <p>This map shows every tornado that occurred in the United States in 2010. Sizes of the dots are based on F-scale. Hover over them to view detailed statistics.</p>
+    <p><span class='source'>Source: <a href='http://www.weather.gov/'>NOAA's National Weather Service</a></span></p>
+  </div>-->
+  <div id="leftColumn">
+  	<div id="logo"><img src="images/logoCloseShadow.png" alt="The Slumlord Next Door"/></div>
+    <div id="nav">
+	    <a id="hackomaha.douglascounty-parcels" href="#" class="navButton dropShadowAll">Land Value</a>
+        <a id="hackomaha.violations-hex-density" href="#" class="navButton dropShadowAll">Violation Density</a>
+    	<a id="hackomaha.all-building-violations" href="#" class="navButton dropShadowAll">All Violations</a>
+        <a id="hackomaha.top-8-violators" href="#" class="navButton dropShadowAll top8link">Top 8</a>
+    </div>
+    <form method="post" action="" id="searchForm" class="dropShadowAll">
+    	<table>
+        	<tr>
+            	<td class="label">Neighborhood</td><td><input type="text" name="neighborhoodSearch" /></td>
+            </tr>
+            <tr>
+            	<td class="label">Owner</td><td><input type="text" name="propertyOwnerSearch" /></td>
+            </tr>
+            <tr>
+            	<td class="label">ZIP Code</td><td><input type="text" name="zipCodeSearch" /></td>
+            </tr>
+            <tr><td colspan="2"><input type="submit" value="Search" class="button" /></td></tr>
+        </table>
+        <!--<a href="#" type="submit" id="searchButton" class="button">Search</a>-->
+    </form>
+    <div class="tabContainer dropShadowAll">
+        <div class="tabNav">
+            <a href="#" class="tab active" id="1">About</a>
+            <a href="#" class="tab" id="2">Details</a>
+            <a href="#" class="tab" id="3">Source</a>
+            <a href="#" class="tab" id="4">Info</a>
+            <a href="#" class="tab noMargin" id="5">Extra</a>
+        </div>
+        <div class="tabBox">
+            <div>
+                <div id="page1" class="tabInfo">This site is a tool to search your neighborhood for major landowners and building code violations. Using data made available by the Douglas County Government, information about land parcel ownership and existing building code violations can be visualized to understand the location and density of violators.</div>
+                <div id="page2" class="tabInfo">Building Code Violations records were received from Omaha Planning Department. Code violation locations were determined to be any location that had a current record on file, regardless of status. The original dataset released did not contain date or any details about the status of the record. Details about status were not included in the released data and we were unable to differentiate between records. The data received was cleaned and duplicate records were removed. Data is current as of December 2011. Land parcel data was obtained from the Douglas County Government and is current as of May 2011.</div>
+                <div id="page3" class="tabInfo">Data was made available by the Omaha Planning Department. The Building Code Violations data is current as of December 2011.</div>
+                <div id="page4" class="tabInfo"><ul><li><a href="http://www.city-data.com/forum/omaha/982817-what-does-nebraska-consider-slumlord.html">What does Nebraska consider a slumlord?</a></li>
+<li><a href="http://www.legalaidofnebraska.com/node/27">Legal Aid of Nebraska: Landlord and Tenant Handbook</a></li>
+<li><a href="http://www.enotes.com/real-estate-reference/landlord-tenant-rights">Landlord/Tenant Rights</a></li></ul> </div>
+                <div id="page5" class="tabInfo">Happy Hack Omaha!</div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <div id="top8Nav" class="dropShadowAll">
+  	<div class="slumlord" id="owner1">
+	    <a id="hackomaha.KOCH-JOHN-R" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.KOCH-JOHN-R" href="#"><span class="slumlordName">John R. Koch</span></a>
+    </div>
+    <div class="slumlord" id="owner2">
+    	<a id="hackomaha.PUSCH-JAN-E" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.PUSCH-JAN-E" href="#"><span class="slumlordName">Jan E. Pusch</span></a>
+    </div>
+    <div class="slumlord" id="owner3">
+    	<a id="hackomaha.BEL-FURY-INVESTMENT-GROUP-LLC" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.BEL-FURY-INVESTMENT-GROUP-LLC" href="#"><span class="slumlordName">Bel Fury Investment Group, LLC</span></a>
+    </div>
+    <div class="slumlord" id="owner4">
+    	<a id="hackomaha.QUREISHI-AND-KHAN-PROPERTIES" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.QUREISHI-AND-KHAN-PROPERTIES" href="#"><span class="slumlordName">Qureishi and Khan Properties</span></a>
+    </div>
+    <div class="slumlord" id="owner5">
+    	<a id="hackomaha.HU-ENTERPRISES-LLC" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.HU-ENTERPRISES-LLC" href="#"><span class="slumlordName">Hu Enterprises, LLC</span></a>
+    </div>
+    <div class="slumlord" id="owner6">
+    	<a id="hackomaha.RIDGEWOOD-PROPERTIES-LLC" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.RIDGEWOOD-PROPERTIES-LLC" href="#"><span class="slumlordName">Ridgewood Properties, LLC</span></a>
+    </div>
+    <div class="slumlord" id="owner7">
+    	<a id="hackomaha.THIRTY-LLC" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.THIRTY-LLC" href="#"><span class="slumlordName">Thirty, LLC</span></a>
+    </div>
+    <div class="slumlord" id="owner8">
+    	<a id="hackomaha.JANUARY-REAL-GROUP-LLC" href="#"><img src="images/mugShot.gif" width="70px" alt="slumlord" class="mugShot"/></a>
+        <a id="hackomaha.JANUARY-REAL-GROUP-LLC" href="#"><span class="slumlordName">January Real Group, LLC</span></a>
+    </div>
+  </div>
+  <a href="#" id="aboutButton" class="button">About SND</a>
+  <a href="#data" id="browseButton" class="button">Data Tables</a>
+  <div id="about" class="dropShadowAll"><div class="closeButton">Close</div>
+  	<h1>Slumlord Next Door</h1>
+  	<p>This site is a tool to search your neighborhood for major landowners and building code violations. Using data made available by the Douglas County Government, information about land parcel ownership and existing building code violations can be visualized to understand the location and density of violators.</p>
+    <h1>Details</h1>
+  	<p>Building Code Violations records were received from Omaha Planning Department. Code violation locations were determined to be any location that had a current record on file, regardless of status. The original dataset released did not contain date or any details about the status of the record. The data received was cleaned and duplicate records were removed. Data is current as of December 2011. Land parcel data was obtained from the Douglas County Government and is current as of May 2011.</p>
+    <h1>Hack Omaha</h1
+    ><p>Slumlord Next Door was developed during Hack Omaha, a three-day programming competition where programmers, designers and data junkies were invited to turn government information into something useful, revealing and beautiful. This is the result.</p>
+    <h1>The Team</h1>
+    <p>Nate Smith, Brian Smith, Julia Smith, Eric Burns, Matt Reinsch and Patrick Keaveny.</p><h1>The Tools</h1>
+  	<p>Slumlord Next Door used Quantum GIS for developing shape files, Tilemill for designing beautiful maps, Mapbox for serving map tiles, Modestmaps for displaying the mbtiles inpage, the Google Charts API for rendering tabular data served from Google Docs, and JQuery for style.</p>
+  </div>
+  <div id='mymap' class="dropShadowBottom">
+  </div>
+   <div id="data"><a href="#" id="lessButton" class="button">Back to Top</a>
+  	<div id="dashboard" class="google-visualization-controls-theme-plus">
+      <table>
+        <tr>
+                    <td><div id="ownerControl"></div></td>
+                    <td><div id="addressControl"></div></td>
+                    <td><div id="zipControl"></div></td>
+                    <td><div id="descControl"></div></td>
+                    <td><div id="yearControl"></div></td>
+                    <td><div id="valueControl"></div></td>
+        </tr>
+        </table>
+                    <div id="providerChart">Loading...</div>
+      </div>
+    
+        
+        <script type="text/javascript">
+    function drawVisualization() {
+      // Prepare the data                      
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=0AhWaMDlRdMY8dGhVRHRzMEZWbTZiRnFHVmZ5bXh2YlE&headers=1');
+        // Apply query language statement.
+        query.setQuery("SELECT A, B, D, G, H, I, J, L");
+      // Send the query with a callback function.
+      query.send(handleQueryResponse);
+    }
+    
+    function handleQueryResponse(response) {
+    
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+    
+      var data = response.getDataTable();  
+      
+          // Define a category picker control for the Gender column
+      var ownerPicker = new google.visualization.ControlWrapper({
+        'controlType': 'CategoryFilter',
+        'containerId': 'ownerControl',
+        'options': {
+          'filterColumnLabel': 'Owner',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': true,
+            'allowMultiple': false
+          }
+        }
+      });
+    
+      // Define a category picker control for the Gender column
+      var addressPicker = new google.visualization.ControlWrapper({
+        'controlType': 'StringFilter',
+        'containerId': 'addressControl',
+        'options': {
+          'filterColumnLabel': 'Address',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': true,
+            'allowMultiple': false
+          }
+        }
+      });
+    
+      // Define a category picker control for the Gender column
+      var zipPicker = new google.visualization.ControlWrapper({
+        'controlType': 'StringFilter',
+        'containerId': 'zipControl',
+        'options': {
+          'filterColumnLabel': 'Zip',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': true,
+            'allowMultiple': false
+          }
+        }
+      });
+      
+        // Define a category picker control for the Gender column
+      var descPicker = new google.visualization.ControlWrapper({
+        'controlType': 'CategoryFilter',
+        'containerId': 'descControl',
+        'options': {
+          'filterColumnLabel': 'Building Height',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': false,
+            'allowMultiple': false
+          }
+        }
+      });
+      
+          // Define a category picker control for the Gender column
+      var yearPicker = new google.visualization.ControlWrapper({
+        'controlType': 'NumberRangeFilter',
+        'containerId': 'yearControl',
+        'options': {
+          'filterColumnLabel': 'Year Built',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': false,
+            'allowMultiple': false
+          }
+        }
+      });
+    
+           // Define a category picker control for the Gender column
+      var valuePicker = new google.visualization.ControlWrapper({
+        'controlType': 'NumberRangeFilter',
+        'containerId': 'valueControl',
+        'options': {
+          'filterColumnLabel': 'Total Value',
+          'ui': {
+          'labelStacking': 'vertical',
+            'allowTyping': false,
+            'allowMultiple': false
+          }
+        }
+      }); 
+  
+  // Define a Pie chart
+  var dataChart = new google.visualization.ChartWrapper({
+    'chartType': 'Table',
+    'containerId': 'providerChart',
+    'options': {
+                    'height': 630,
+                    'width': window.innerWidth -68,
+					'page': 'enable',
+					'pageSize': 25,
+					'alternatingRowStyle': 'TRUE',
+					'sortColumn': -1,
+					'cssClassNames': {headerRow: 'table-header-background', tableRow: 'table-row', oddTableRow: 'odd-table-row', selectedTableRow: 'google-hover-table-row', hoverTableRow: 'google-hover-table-row', headerCell: 'table-header-background', tableCell: '', rowNumberCell: ''}
+                   },
+    // Instruct the piechart to use colums 0 (Name) and 3 (Donuts Eaten)
+    // from the 'data' DataTable.
+    'view': {'columns': [0, 1, 2, 3, 4, 5, 6, 7]}
+  });
+
+  // Create a dashboard
+  new google.visualization.Dashboard(document.getElementById('dashboard')).
+      // Establish bindings, declaring the both the slider and the category
+      // picker will drive both charts.
+	  bind([ownerPicker], [descPicker]).
+	  bind([ownerPicker], [yearPicker]).
+	  bind([ownerPicker], [valuePicker]).
+	  bind([ownerPicker], [zipPicker]).
+	  bind([zipPicker], [descPicker]).
+	  bind([zipPicker], [yearPicker]).
+	  bind([zipPicker], [valuePicker]).
+	  bind([descPicker], [yearPicker]).
+	  bind([descPicker], [valuePicker]).
+	  bind([yearPicker], [valuePicker]).
+	  bind([ownerPicker], [dataChart]).
+	  bind([addressPicker], [dataChart]).
+	  bind([zipPicker], [dataChart]).
+	  bind([yearPicker], [dataChart]).
+	  bind([descPicker], [dataChart]).
+	  bind([valuePicker], [dataChart]).
+      // Draw the entire dashboard.
+      draw(data);
+
+}
+      //google.setOnLoadCallback(drawVisualization);
+    </script>	
+  </div>
+  	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
+    <script src='js/functions.js' type='text/javascript'></script>  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1.1', {packages: ['controls']});
+	  google.setOnLoadCallback(drawVisualization);
+    </script> 
+</body>
+</html>
