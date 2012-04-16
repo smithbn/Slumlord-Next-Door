@@ -1,4 +1,3 @@
-  
   p {
     line-height: 20px;
   }
@@ -31,7 +30,6 @@
   .source {
     font-size: 80%;
   }
-
 
 /* Begin JULIA edits */
 
@@ -88,7 +86,7 @@ html {
 
 #searchForm {
 	width:237px;
-	background:url("images/transWhite");
+	background:url("images/transWhite.png");
 	background-repeat:repeat;
 	border:1px solid #693;
 	padding: 10px;
@@ -144,7 +142,7 @@ a.searchButton {
 
 .tabBox {
 	width:237px;
-	background:url("images/transWhite");
+	background:url("images/transWhite.png");
 	background-repeat:repeat;
 	border:1px solid #693;
 	border-top:0;
@@ -157,7 +155,7 @@ a.searchButton {
 .tabNav {
 	height:30px;
 	width:256px;
-	background:url("images/transWhite");
+	background:url("images/transWhite.png");
 	background-repeat:repeat;
 	border:1px solid #693;
 	border-bottom:0;
@@ -196,7 +194,7 @@ a.searchButton {
 }
 
 #top8Nav {
-	background:url("images/transWhite");
+	background:url("images/transWhite.png");
 	background-repeat:repeat;
 	border:1px solid #693;
 	padding: 21px;
@@ -292,7 +290,7 @@ a.searchButton {
 }
 
 #about {
-	background:url("images/transWhite");
+	background:url("images/transWhite.png");
 	background-repeat:repeat;
 	border:1px solid #693;
 	padding: 28px;
