@@ -25,6 +25,6 @@
         .tilejson(tilejson)
         .on(wax.movetip().parent(map.parent).events());
 
-    map.setCenterZoom({ lat: 41.20139, lon: -96.036001 }, 11);
+    map.setCenterZoom({ lat: 41.20139, lon: -96.066001 }, 11);
   });
   
