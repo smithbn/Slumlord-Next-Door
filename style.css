@@ -1,0 +1,392 @@
+  
+  p {
+    line-height: 20px;
+  }
+  a {
+    color: #29A1E1;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #mymap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+	min-height:660px;
+  }
+  #sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 359px;
+    background: #111;
+    color: #fff;
+    border-left:1px solid #000;
+    padding: 20px;
+  }
+  .source {
+    font-size: 80%;
+  }
+
+
+/* Begin JULIA edits */
+
+body {
+	/*background-color:#693;*/
+	background-color:#444;
+}
+
+html {
+	padding:0;
+	margin:0;
+}
+
+#leftColumn {
+	width:270px;
+	height:100%;
+	min-height:100%;
+	position:absolute;
+	z-index:500;
+	left:24px;
+	top:24px;
+}
+
+#nav {
+	margin-top:14px;
+	width:270px;
+}
+
+#nav a {
+	padding:4px 10px 4px 10px;
+	background-color:#fff;
+	color:#000;
+	border:1px solid #693;
+	text-decoration:none;
+}
+
+#nav a:hover {
+	color: #29A1E1;
+	color:#fff;
+	background-color:#000;
+}
+
+#nav a:active {
+	background-color:#693;
+}
+
+.navButton {	
+	width:104px;
+	display:block;
+	float:left;
+	margin:0 0 7px 7px;
+	text-align:center;
+}
+
+#searchForm {
+	width:237px;
+	background:url("images/transWhite");
+	background-repeat:repeat;
+	border:1px solid #693;
+	padding: 10px;
+	float:left;
+	margin:7px 0 7px 7px;
+	display:none;
+}
+
+.label {
+	padding-right:7px;
+}
+
+a.searchButton {	
+	width:64px;
+	display:block;
+	float:left;
+	background-color:#fff;
+	border:1px solid #693;
+	color:#000;
+	padding:4px 10px 4px 10px;
+	margin:10px auto 0px 74px;
+	text-align:center;
+}
+
+.button {
+	width:71px;
+	display:block;
+	background-color:#fff;
+	border:1px solid #693;
+	color:#000;
+	padding:4px 10px 4px 10px;
+	margin:10px auto 0px 80px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.button:hover {
+	color:#29A1E1;
+	color:#fff;
+	background-color:#000;
+	text-decoration:none;
+}
+
+.button:active {
+	background-color:#693;
+}
+
+.tabContainer {
+	width:259px;
+	float:left;
+	margin:7px 0 7px 7px;
+}
+
+.tabBox {
+	width:237px;
+	background:url("images/transWhite");
+	background-repeat:repeat;
+	border:1px solid #693;
+	border-top:0;
+	padding: 0px 10px 10px 10px;
+	float:left;
+	max-height:250px;
+	overflow:auto;
+}
+
+.tabNav {
+	height:30px;
+	width:256px;
+	background:url("images/transWhite");
+	background-repeat:repeat;
+	border:1px solid #693;
+	border-bottom:0;
+	padding:1px 0 0 1px;
+	float:left;
+}
+
+.tabNav a {
+	display:block;
+	float:left;
+	width:19.59%;
+	margin-right:1px;
+	padding:4px 0;
+	text-align:center;
+	background-color:#ABC48D;
+	color:#497C0E;
+	text-decoration:none;
+}
+
+.tabNav a:hover {
+	color:#000;
+}
+
+.tabNav a.active {
+	background-color:#693;
+	color:#fff;
+}
+
+.tabNav a.active:hover {
+	color:#fff;
+}
+
+.tabInfo {
+	margin-top:0px;
+	display:none;
+}
+
+#top8Nav {
+	background:url("images/transWhite");
+	background-repeat:repeat;
+	border:1px solid #693;
+	padding: 21px;
+	padding-bottom:14px;
+	padding-left:49px;
+	float:left;
+	margin:7px 0 28px 0px;
+	z-index:99999;
+	position:absolute;
+	bottom:0px;
+	right:28px;
+	left:311px;
+	height:150px;
+	max-height:150px;
+	min-width:600px;
+	overflow:hidden;
+	font-size:.9em;
+}
+
+.slumlord {
+	float:left;
+	width:12.5%;
+	color:#693;
+}
+
+.mugShot {
+	border:1px sold #693;
+	clear:both;
+}
+
+.slumlordName {
+	display:block;
+	color:#693;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:.9em;
+}
+
+.slumlordName:hover {
+	color:#000;
+}
+
+#aboutButton {
+	top:14px;
+	position:absolute;
+	right:201px;
+	z-index:99999;
+	background-color:#693;
+	color:#fff;
+	border:1px solid black;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+#aboutButton:hover {
+	background-color:#000;
+	border:1px solid #693;
+}
+
+#browseButton {
+	top:14px;
+	position:absolute;
+	right:99px;
+	z-index:99999;
+	background-color:#693;
+	color:#fff;
+	border:1px solid black;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+#browseButton:hover {
+	background-color:#000;
+	border:1px solid #693;
+}
+
+#lessButton {
+	bottom:14px;
+	position:absolute;
+	right:28px;
+	z-index:99999;
+	background-color:#fff;
+	color:#000;
+	border:1px solid black;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+#lessButton:hover {
+	background-color:#000;
+	border:1px solid #693;
+	color:#fff;
+}
+
+#about {
+	background:url("images/transWhite");
+	background-repeat:repeat;
+	border:1px solid #693;
+	padding: 28px;
+	float:left;
+	margin:7px 0 7px 7px;
+	z-index:99999;
+	position:absolute;
+	top:66px;
+	right:28px;
+	margin-left:318px;
+	max-height:500px;
+	overflow:auto;
+	font-size:1.2em;
+}
+
+#about h1 {
+	font-size:1.05em;;
+}
+
+#about p {
+	margin-top:-4px;
+}
+
+.closeButton {
+	float:right;
+	font-size:.8em;
+	display:relative;
+	cursor:pointer;
+	color:#693;
+	z-index:99999;
+}
+
+#data {
+	position: absolute;
+    margin-top: 470px;
+	padding-top:200px;
+	padding-left:28px;
+	padding-right:28px;
+    right: 0;
+    left: 0;
+    min-height: 730px;
+	z-index:99999;
+	background:url("images/grid20.png") repeat;
+}
+
+/*.wax-tooltip {
+	z-index:999999;
+    position:absolute;
+	background:url("images/transWhite.png") repeat;
+	top:100;
+	right:28;
+	color:#000;
+	border:1px solid #693;
+}
+
+.wax-tooltip .violation-tooltip {
+	z-index:999999;
+    background:url("images/transWhite.png") repeat;;
+	color:#000;
+	border:1px solid #693;
+	padding:7px;
+	position:absolute;
+	top:100;
+	right:28
+}*/
+
+.hide {
+	display:none;
+}
+
+.show {
+	display:block;
+}
+
+.noMargin {
+	margin:0;
+}
+
+.right {
+	position:absolute;
+	right:28px;
+}
+
+.dropShadowAll 
+{
+   -webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.2);
+   -moz-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.2);
+   box-shadow:2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.dropShadowBottom
+{
+   -webkit-box-shadow:0px 2px 0px rgba(0, 0, 0, 0.2);
+   -moz-box-shadow:0px 2px 0px rgba(0, 0, 0, 0.2);
+   box-shadow:0px 2px 0px rgba(0, 0, 0, 0.2);
+}
